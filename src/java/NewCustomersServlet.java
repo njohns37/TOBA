@@ -81,37 +81,39 @@ public class NewCustomersServlet extends HttpServlet {
                  url = "/New_customer.jsp";
              }
              else if (action.equals("add")){
-                 String FirstName = request.getParameter("FirstName");
-                 String LastName = request.getParameter("LastName");
-                 String Phone = request.getParameter("Phone");
-                 String Address = request.getParameter("Address");
-                 String City = request.getParameter("City");
-                 String State = request.getParameter("State");
-                 String Zipcode = request.getParameter("Zipcode");
-                 String Email = request.getParameter("Email");
+                 String firstName = request.getParameter("FirstName");
+                 String lastName = request.getParameter("LastName");
+                 String phone = request.getParameter("Phone");
+                 String address = request.getParameter("Address");
+                 String city = request.getParameter("City");
+                 String state = request.getParameter("State");
+                 String zipcode = request.getParameter("Zipcode");
+                 String email = request.getParameter("Email");
                          
                 //Store data in User object
-                User user = new User(FirstName, LastName, Phone, Address, City, State, Zipcode, Email);
+                User user = new User(firstName, lastName, phone, address, city, state, zipcode, email);
 
                 // validate parameters
                 String message;
-                if (FirstName == null || LastName == null || Phone == null || Address == null || City == null || State == null || Zipcode == null || Email == null || FirstName.isEmpty() ||
-                    LastName.isEmpty() || Phone.isEmpty() || Address.isEmpty() || City.isEmpty() || State.isEmpty() || Zipcode.isEmpty() || Email.isEmpty()){
+                if (firstName == null || lastName == null || phone == null || address == null || city == null || state == null || zipcode == null || email == null || firstName.isEmpty() ||
+                    lastName.isEmpty() || phone.isEmpty() || address.isEmpty() || city.isEmpty() || state.isEmpty() || zipcode.isEmpty() || email.isEmpty()){
                     message = "Please fill out all text boxes.";
                     url = "/New_Customer.jsp";
-                }
+                    }
                 else{
                     message = "";
                     url = "/Success.html";
                     UserDB.insert(user);
-                
+                }
                     request.setAttribute ("message", message);
                     request.setAttribute ("user", user);
                 }
-                // forward request
+            // forward request
             getServletContext()
                 .getRequestDispatcher(url)
                 .forward(request,response);
     }
 }
-}
+    
+    
+

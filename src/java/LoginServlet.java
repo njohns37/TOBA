@@ -58,6 +58,22 @@ public class LoginServlet extends HttpServlet {
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         processRequest(request, response);
+         response.setContentType("text/html;charset=UTF-8");
+            String url = "/login.html";
+            String username = request.getParameter("Username");
+            String password = request.getParameter("Password");
+            
+            if (username.equals("jsmith@toba.com") && password.equals("letmein"))
+            {
+            url = "/Account_activity.html";
+            }
+            else{
+            url = "/Login_Failure.html";
+            }
+           
+    getServletContext()
+                .getRequestDispatcher(url)
+                .forward(request, response);
     }
 
     /**
@@ -71,28 +87,10 @@ public class LoginServlet extends HttpServlet {
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-            response.setContentType("text/html;charset=UTF-8");
-            String url = "/Account_activity.html";
-            String username = request.getParameter("Username");
-            String password = request.getParameter("Password");
-            
-            if (username.equals("jsmith@toba.com") && password.equals("letmein"))
-            {
-            url = "/Account_activity.html";
-            }
-            else{
-            url = "/Login_Failure.html";
-            }
+                // Call the doGet Method 
+                doGet(request, response);
     }
-
-    /**
-     * Returns a short description of the servlet.
-     *
-     * @return a String containing servlet description
-     */
-    @Override
-    public String getServletInfo() {
-        return "Short description";
-    }// </editor-fold>
-           
 }
+
+   
+
