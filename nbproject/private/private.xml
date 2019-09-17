@@ -5,15 +5,19 @@
             <url>src/java/LoginServlet.java</url>
             <bookmark id="1">
                 <name/>
-                <line>61</line>
+                <line>56</line>
                 <key/>
             </bookmark>
         </file>
     </editor-bookmarks>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
+            <file>file:/C:/Users/naden/TOBA/web/Success.html</file>
             <file>file:/C:/Users/naden/TOBA/src/java/NewCustomersServlet.java</file>
             <file>file:/C:/Users/naden/TOBA/src/java/LoginServlet.java</file>
+            <file>file:/C:/Users/naden/TOBA/web/password_reset.jsp</file>
+            <file>file:/C:/Users/naden/TOBA/web/Account_activity.html</file>
+            <file>file:/C:/Users/naden/TOBA/src/java/User.java</file>
             <file>file:/C:/Users/naden/TOBA/web/New_customer.jsp</file>
         </group>
     </open-files>

@@ -1,10 +1,6 @@
-<%-- 
-    Document   : Error_404
-    Created on : Aug 27, 2019, 11:24:10 PM
-    Author     : naden
---%>
-
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<c:import url="/includes/header.html" />
 <!DOCTYPE html>
 <html>
 <head>
@@ -14,7 +10,9 @@
 </head>
 
 <body>
-<h1>TOBA Titan Online Banking</h1>
-<h2>404 error code</h2>
+<h1>404 error code</h1>
 </body>
+<footer>
+    <c:import url="/includes/footer.jsp" />
+</footer>
 </html>

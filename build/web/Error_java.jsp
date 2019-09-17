@@ -1,9 +1,5 @@
-<%-- 
-    Document   : Error_java
-    Created on : Aug 27, 2019, 11:25:40 PM
-    Author     : naden
---%>
-
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<c:import url="/includes/header.html" />
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
@@ -13,7 +9,9 @@
 <title>Java Error</title>
 </head>
 <body>
-<h1>TOBA Titan Online Banking</h1>
-<h2>Java has thrown exception</h2>
+<h1>Java has thrown exception</h1>
 </body>
+<footer>
+    <c:import url="/includes/footer.jsp" />
+</footer>
 </html>
