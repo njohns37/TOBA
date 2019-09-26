@@ -52,7 +52,7 @@ public final class New_005fcustomer_jsp extends org.apache.jasper.runtime.HttpJs
       _jspx_resourceInjector = (org.glassfish.jsp.api.ResourceInjector) application.getAttribute("com.sun.appserv.jsp.resource.injector");
 
       out.write(" \n");
-      out.write(" \n");
+      out.write("\n");
       if (_jspx_meth_c_import_0(_jspx_page_context))
         return;
       out.write("\n");
@@ -65,16 +65,16 @@ public final class New_005fcustomer_jsp extends org.apache.jasper.runtime.HttpJs
       out.write("    </head>\n");
       out.write("    <body>\n");
       out.write("    <h1>TOBA Titan Online Banking</h1>\n");
-      out.write("        <a href=\"index.html\">Home</a>\n");
-      out.write("        <a href=\"login.html\">Login</a>\n");
-      out.write("        <a href=\"Transaction.html\">Transactions</a>\n");
+      out.write("        <a href=\"index.jsp\">Home</a>\n");
+      out.write("        <a href=\"login.jsp\">Login</a>\n");
+      out.write("        <a href=\"Transaction.jsp\">Transactions</a>\n");
       out.write("        \n");
       out.write("        <h2>Register</h2>\n");
       out.write("        \n");
       out.write("        <p><i>");
       out.write((java.lang.String) org.apache.jasper.runtime.PageContextImpl.evaluateExpression("${message}", java.lang.String.class, (PageContext)_jspx_page_context, null));
       out.write("</i></p>\n");
-      out.write("        <form action=\"New Customer\" method=\"post\">\n");
+      out.write("        <form action=\"/NewCustomersServlet\" method=\"post\">\n");
       out.write("        <input type=\"hidden\" name=\"action\" value=\"add\">        \n");
       out.write("        <label class=\"pad_top\">First Name:</label>\n");
       out.write("        <input type=\"text\" name=\"FirstName\" value=\"");
@@ -112,13 +112,11 @@ public final class New_005fcustomer_jsp extends org.apache.jasper.runtime.HttpJs
       out.write("        <input type=\"submit\" value=\"Join Now\" class=\"margin_left\">\n");
       out.write("    </form>\n");
       out.write("    </body>\n");
-      out.write("    <footer>\n");
-      out.write("        ");
+      out.write("            ");
       if (_jspx_meth_c_import_1(_jspx_page_context))
         return;
       out.write("\n");
-      out.write("    </footer>\n");
-      out.write("</html>\n");
+      out.write("    </html>\n");
     } catch (Throwable t) {
       if (!(t instanceof SkipPageException)){
         out = _jspx_out;

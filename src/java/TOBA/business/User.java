@@ -1,3 +1,5 @@
+package TOBA.business;
+
 
 import java.io.Serializable;
 
@@ -10,12 +12,12 @@ public class User implements Serializable {
     private String address;
     private String city;
     private String state;
-    private int zipcode;
+    private String zipcode;
     private String email;
     
-    public User(String username, String password, String firstName, String lastName, String phone, String address, String city, String state, int zipcode, String email) {
-        this.username = username;
-        this.password = password;
+    public User(String firstName, String lastName, String phone, String address, String city, String state, String zipcode, String email) {
+        this.username = lastName + zipcode;
+        this.password = "welcome1";
         this.firstName = firstName;
         this.lastName = lastName;
         this.phone = phone;
@@ -32,7 +34,7 @@ public class User implements Serializable {
     }
 
     public void setUsername(String lastName, String zipcode) {
-        this.username = lastName + zipcode;
+        this.username = username;
     }
 
     public String getPassword() {
@@ -40,7 +42,7 @@ public class User implements Serializable {
     }
 
     public void setPassword(String password) {
-        this.password = "welcome1";
+        this.password = password;
     }
 
     public String getFirstName() {
@@ -91,11 +93,11 @@ public class User implements Serializable {
         this.state = state;
     }
 
-    public int getZipcode() {
+    public String getZipcode() {
         return zipcode;
     }
 
-    public void setZipcode(int zipcode) {
+    public void setZipcode(String zipcode) {
         this.zipcode = zipcode;
     }
 

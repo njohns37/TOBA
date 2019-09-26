@@ -11,7 +11,7 @@
 <body>
 <h1>Java has thrown exception</h1>
 </body>
-<footer>
-    <c:import url="/includes/footer.jsp" />
-</footer>
+
+<c:import url="/includes/footer.jsp" />
+
 </html>

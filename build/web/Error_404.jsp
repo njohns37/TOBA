@@ -12,7 +12,7 @@
 <body>
 <h1>404 error code</h1>
 </body>
-<footer>
-    <c:import url="/includes/footer.jsp" />
-</footer>
+
+<c:import url="/includes/footer.jsp" />
+
 </html>

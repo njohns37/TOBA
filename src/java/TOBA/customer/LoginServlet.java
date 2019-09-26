@@ -1,4 +1,4 @@
-
+package TOBA.customer;
 import java.io.IOException;
 import java.io.PrintWriter;
 import javax.servlet.ServletException;
@@ -31,16 +31,16 @@ public class LoginServlet extends HttpServlet {
             throws ServletException, IOException {
         processRequest(request, response);
          response.setContentType("text/html;charset=UTF-8");
-            String url = "/login.html";
+            String url = "/login.jsp";
             String username = request.getParameter("Username");
             String password = request.getParameter("Password");
             
             if (username.equals("jsmith@toba.com") && password.equals("letmein"))
             {
-            url = "/Account_activity.html";
+            url = "/Account_activity.jsp";
             }
             else{
-            url = "/Login_Failure.html";
+            url = "/Login_Failure.jsp";
             }
            
     getServletContext()

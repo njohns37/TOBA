@@ -1,5 +1,5 @@
- <%@page contentType="text/html" pageEncoding="UTF-8"%>
- <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<%@page contentType="text/html" pageEncoding="UTF-8"%> 
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <c:import url="/includes/header.html" />
 <!DOCTYPE html>
 <html>
@@ -10,14 +10,14 @@
     </head>
     <body>
     <h1>TOBA Titan Online Banking</h1>
-        <a href="index.html">Home</a>
-        <a href="login.html">Login</a>
-        <a href="Transaction.html">Transactions</a>
+        <a href="index.jsp">Home</a>
+        <a href="login.jsp">Login</a>
+        <a href="Transaction.jsp">Transactions</a>
         
         <h2>Register</h2>
         
         <p><i>${message}</i></p>
-        <form action="New Customer" method="post">
+        <form action="/NewCustomersServlet" method="post">
         <input type="hidden" name="action" value="add">        
         <label class="pad_top">First Name:</label>
         <input type="text" name="FirstName" value="${user.firstName}"><br><br>
@@ -39,7 +39,5 @@
         <input type="submit" value="Join Now" class="margin_left">
     </form>
     </body>
-    <footer>
-        <c:import url="/includes/footer.jsp" />
-    </footer>
-</html>
+    <c:import url="/includes/footer.jsp" />
+    </html>

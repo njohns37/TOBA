@@ -1,3 +1,5 @@
+package TOBA.customer;
+import TOBA.business.User;
 import java.io.*;
 import javax.servlet.*;
 import javax.servlet.http.*;
@@ -51,22 +53,25 @@ public class NewCustomersServlet extends HttpServlet {
                  String address = request.getParameter("Address");
                  String city = request.getParameter("City");
                  String state = request.getParameter("State");
-                 int zipcode = request.getParameter("Zipcode");
+                 String zipcode = request.getParameter("Zipcode");
                  String email = request.getParameter("Email");
                  
-                HttpSession session = request.getSession();        
+                HttpSession session = request.getSession();       
+                
                 //Store data in User object
-                User user = new User(username, password, firstName, lastName, phone, address, city, state, zipcode, email);
+                User user = new User(firstName, lastName, phone, address, city, state, zipcode, email);
+                session.setAttribute("user", user);
                 
                                                                           
                 //set user object and set url
                request.setAttribute("user", user);
-               url = "/Success.html";
+               url = "/Success.jsp";
                
                if (action.equals("Submit")){
-               request.setAttribute("password", user);
-               url = "/Account_activity.html";
-             }
+                    request.setAttribute("password", user);
+                    url = "/Account_activity.jsp";
+               
+                }
                                           
             // forward request
             getServletContext()
