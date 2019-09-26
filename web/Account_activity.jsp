@@ -14,7 +14,7 @@
             <a href="Transaction.jsp">Transactions</a><br><br>
             
             <c:if test="${session.user != null}">
-                <p>Hello${NewCustomerServlet.user.firstName}</p>
+                <p>Hello${NewCustomerServlet.user.firstName.lastNmae}</p>
             </c:if>
             <c:if test="${session.user == null}">
                 <p>Not Logged In</p>            
